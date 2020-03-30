@@ -15,18 +15,18 @@
     border: 0px;
     cursor: pointer;
     outline: none;
+    transition: background-color 0.2s;
 }
 
 .BuildControl button:disabled {
-    background-color: #AC9980;
-    border: 1px solid #7E7365;
+    background-color: #ea7881;
+    border: 0pxy;
     color: #ccc;
     cursor: default;
+    transition: background-color 0.2s;
 }
 
 .BuildControl button:hover:disabled {
-    background-color: #AC9980;
-    color: #ccc;
     cursor: not-allowed;
 }
 
