@@ -1,30 +1,51 @@
 .NavigationItem {
-    margin: 0;
+    margin: 10px 0;
     box-sizing: border-box;
-    display: flex;
-    height: 100%;
-    align-items: center;
+    display: block;
+    width: 100%;
 }
 
 .NavigationItem a {
-    color: rgba(255, 255, 255, 0.85);
+    color: #5a5a5a;
     text-decoration: none;
-    height: 100%;
+    width: 100%;
     font-weight: bold;
-    padding: 16px 10px;
-    /* border-bottom: 4px solid transparent; */
+    /* padding: 16px 10px;
+    border-bottom: 4px solid transparent; */
     box-sizing: border-box;
     display: block;
     transition: background-color 0.2s, color 0.2s;
 }
 
 .NavigationItem a:active, .NavigationItem a.active {
-    background-color: #ae1b26;
-    color: #fff;
-    /* border-bottom: 4px solid #e13d4a; */
+    color: #000;
 }
 
-.NavigationItem a:hover {
-    background-color: #bd1d2a;
-    color: #fff;
+/****       LARGE SCREENS               *****/
+
+@media (min-width:500px) {
+    .NavigationItem {
+        margin: 0;
+        display: flex;
+        height: 100%;
+        width: auto;
+        align-items: center;
+    }
+    .NavigationItem a {
+        color: rgba(255, 255, 255, 0.85);
+        height: 100%;
+        font-weight: bold;
+        padding: 16px 10px;
+        /* border-bottom: 4px solid transparent; */
+        transition: background-color 0.2s, color 0.2s;
+    }
+    .NavigationItem a:active, .NavigationItem a.active {
+        background-color: #ae1b26;
+        color: #fff;
+        /* border-bottom: 4px solid #e13d4a; */
+    }
+    .NavigationItem a:hover {
+        background-color: #bd1d2a;
+        color: #fff;
+    }
 }
