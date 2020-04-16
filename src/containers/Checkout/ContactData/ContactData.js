@@ -87,12 +87,13 @@ export default class ContactData extends Component {
                 validation: {
                     required: false
                 },
-                valid: false,
+                valid: true,
                 value: 'fastest',
                 touched: false
                 // value: ''
             }
         },
+        formIsValid: false,
         loading: false
     }
 
@@ -122,10 +123,13 @@ export default class ContactData extends Component {
 
     checkValidity(value, rules) {
         let isValid = true;
+
+        if (!rules) {
+            return true;
+        }
         if (rules.required) {
             isValid = value.trim() !== '' && isValid;
         }
-
         if (rules.length) {
             isValid = value.length === rules.length && isValid;
         }
@@ -145,7 +149,13 @@ export default class ContactData extends Component {
         updatedFormElement.touched = true;
         console.log(updatedFormElement)
         updatedOrderForm[inputIdentifier] = updatedFormElement;
-        this.setState({ orderForm: updatedOrderForm });
+
+        let formIsValid = true;
+        for (let inputIdentifier in updatedOrderForm) {
+            formIsValid = updatedOrderForm[inputIdentifier].valid && formIsValid
+        }
+
+        this.setState({ orderForm: updatedOrderForm, formIsValid: formIsValid });
     }
 
     render() {
@@ -175,7 +185,8 @@ export default class ContactData extends Component {
                 <Input inputType="input" type="email" name="email" placeholder="Your email" />
                 <Input inputType="input" type="text" name="street" placeholder="Street" />
                 <Input inputType="input" type="text" name="postal" placeholder="Postal Code" /> */}
-                <Button btnType="Success" clicked={this.orderHandler}>ORDER</Button>
+                {console.log(this.state.formIsValid)}
+                <Button btnType="Success" disabled={!this.state.formIsValid} clicked={this.orderHandler}>ORDER</Button>
             </form>
         )
         if (this.state.loading) {
