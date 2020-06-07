@@ -21,9 +21,15 @@
 }
 
 .Success {
-    color: #5C9210;
+    color: #5cb85c
 }
 
 .Danger {
-    color: #944317;
+    color: #d9534f;
+}
+
+.Primary {
+    color: #0275d8;
+    /* text-decoration: underline; */
+    font-size: small;
 }

@@ -1,0 +1,49 @@
+.Auth {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.header {
+    color: #da2230;
+}
+
+.errorMsg {
+    padding: 3px 20px;
+    background-color: #da2230;
+    color: white;
+    text-transform: lowercase;
+    font-size: smaller;
+    border-radius: 2px;
+}
+
+.submitBtn {
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #da2230;
+    color: #da2230;
+    font-family: inherit;
+    margin: 12px;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: small;
+    padding: 10px 20px;
+    vertical-align: middle;
+    transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+    background-color: #da2230;
+    color: white;
+}
+
+@media(min-width: 600px) {
+    .Auth {
+        width: 500px;
+    }
+}
