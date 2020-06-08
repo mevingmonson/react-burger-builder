@@ -49,3 +49,9 @@ export const authAction = (email, password, isSignUp) => dispatch => {
             dispatch(authFail(err.response.data.error))
         })
 }
+
+// setting path to BurgerBuilder or checkout depending on purchasing
+export const setAuthRedirectPath = path => ({
+    type: actionTypes.SET_AUTH_REDIRECT_PATH,
+    path
+})

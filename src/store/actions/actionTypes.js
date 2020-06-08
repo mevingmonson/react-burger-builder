@@ -13,6 +13,8 @@ const AUTH_FAIL = 'AUTH_FAIL';
 const AUTH_SUCCESS = 'AUTH_SUCCESS';
 const AUTH_LOGOUT = 'AUTH_LOGOUT';
 
+const SET_AUTH_REDIRECT_PATH = 'SET_AUTH_REDIRECT_PATH';
+
 export const actionTypes = {
     ADD_INGREDIENT,
     REMOVE_INGREDIENT,
@@ -25,5 +27,6 @@ export const actionTypes = {
     AUTH_START,
     AUTH_FAIL,
     AUTH_SUCCESS,
-    AUTH_LOGOUT
+    AUTH_LOGOUT,
+    SET_AUTH_REDIRECT_PATH
 }
