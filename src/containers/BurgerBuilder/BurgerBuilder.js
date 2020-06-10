@@ -54,7 +54,6 @@ export class BurgerBuilder extends Component {
     }
 
     render() {
-        console.log(this.props)
         const disabledInfo = {
             ...this.props.ings
         };
@@ -89,7 +88,6 @@ export class BurgerBuilder extends Component {
         //     orderSummary = <Spinner />
         // }
 
-        console.log(this.state)
 
         return (
             <Aux>

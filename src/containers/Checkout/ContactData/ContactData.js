@@ -101,7 +101,6 @@ class ContactData extends Component {
     }
 
     orderHandler = (event) => {
-        console.log(this.state.orderForm)
         event.preventDefault();
         // this.setState({ loading: true })
         const formData = {};
@@ -144,7 +143,6 @@ class ContactData extends Component {
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid = this.checkValidity(updatedFormElement.value, updatedFormElement.validation)
         updatedFormElement.touched = true;
-        console.log(updatedFormElement)
         updatedOrderForm[inputIdentifier] = updatedFormElement;
 
         let formIsValid = true;
@@ -182,7 +180,6 @@ class ContactData extends Component {
                 <Input inputType="input" type="email" name="email" placeholder="Your email" />
                 <Input inputType="input" type="text" name="street" placeholder="Street" />
                 <Input inputType="input" type="text" name="postal" placeholder="Postal Code" /> */}
-                {console.log(this.state.formIsValid)}
                 <Button btnType="Success" disabled={!this.state.formIsValid} clicked={this.orderHandler}>ORDER</Button>
             </form>
         )
