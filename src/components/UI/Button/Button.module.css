@@ -12,7 +12,7 @@
 
 .Button:first-of-type {
     margin-left: 0;
-    padding-left: 0;
+    /* padding-left: 0; */
 }
 
 .Button:disabled {
@@ -21,15 +21,86 @@
 }
 
 .Success {
-    color: #5cb85c
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #5cb85c;
+    color: #5cb85c;
+    font-family: inherit;
+    margin: 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: small;
+    padding: 5px 8px;
+    vertical-align: middle;
+    transition: background-color 0.2s;
+}
+
+.Success:hover {
+    background-color: #5cb85c;
+    color: white;
 }
 
 .Danger {
+    /* color: #d9534f; */
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #d9534f;
     color: #d9534f;
+    font-family: inherit;
+    margin: 12px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: small;
+    padding: 5px 8px;
+    vertical-align: middle;
+    transition: background-color 0.2s;
+}
+
+.Danger:hover {
+    background-color: #d9534f;
+    color: white;
+}
+
+.OrderButton {
+    background-color: #3aad28;
+    outline: none;
+    cursor: pointer;
+    border: 0px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.2em;
+    padding: 15px 40px;
+    margin: 12px;
+    border-radius: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: background-color 0.2s;
+}
+
+.OrderButton:hover, .OrderButton:active {
+    background-color: #319122;
+    /* transition: background-color 0.2s; */
+}
+
+.OrderButton:disabled {
+    background-color: #7dde6e;
+    cursor: not-allowed;
+    /* border: 1px solid #ccc; */
+    color: #3aad28;
+    /* transition: background-color 0.2s; */
+}
+
+.OrderButton:disabled:hover {
+    background-color: #96e48a;
 }
 
 .Primary {
     color: #0275d8;
-    /* text-decoration: underline; */
     font-size: small;
+}
+
+.Primary:hover {
+    text-decoration: underline;
 }

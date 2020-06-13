@@ -180,7 +180,7 @@ class ContactData extends Component {
                 <Input inputType="input" type="email" name="email" placeholder="Your email" />
                 <Input inputType="input" type="text" name="street" placeholder="Street" />
                 <Input inputType="input" type="text" name="postal" placeholder="Postal Code" /> */}
-                <Button btnType="Success" disabled={!this.state.formIsValid} clicked={this.orderHandler}>ORDER</Button>
+                <Button btnType="OrderButton" disabled={!this.state.formIsValid} clicked={this.orderHandler}>ORDER</Button>
             </form>
         )
         if (this.props.loading) {
